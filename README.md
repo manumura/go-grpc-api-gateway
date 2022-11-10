@@ -5,10 +5,10 @@ This repository is part of my article on Medium:
 
 ## Repositories
 
-- https://github.com/hellokvn/go-grpc-product-svc - Product SVC (gRPC)
-- https://github.com/hellokvn/go-grpc-order-svc - Order SVC (gRPC)
-- https://github.com/hellokvn/go-grpc-auth-svc - Authentication SVC (gRPC)
-- https://github.com/hellokvn/go-grpc-api-gateway - API Gateway (HTTP)
+- https://github.com/manumura/go-grpc-product-svc - Product SVC (gRPC)
+- https://github.com/manumura/go-grpc-order-svc - Order SVC (gRPC)
+- https://github.com/manumura/go-grpc-auth-svc - Authentication SVC (gRPC)
+- https://github.com/manumura/go-grpc-api-gateway - API Gateway (HTTP)
 
 ## Installation
 

@@ -1,6 +1,6 @@
-module github.com/hellokvn/go-grpc-api-gateway
+module github.com/manumura/go-grpc-api-gateway
 
-go 1.18
+go 1.19
 
 require github.com/gin-gonic/gin v1.7.7
 

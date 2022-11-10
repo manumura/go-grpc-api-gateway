@@ -3,8 +3,8 @@ package order
 import (
 	"fmt"
 
-	"github.com/hellokvn/go-grpc-api-gateway/pkg/config"
-	"github.com/hellokvn/go-grpc-api-gateway/pkg/order/pb"
+	"github.com/manumura/go-grpc-api-gateway/pkg/config"
+	"github.com/manumura/go-grpc-api-gateway/pkg/order/pb"
 	"google.golang.org/grpc"
 )
 

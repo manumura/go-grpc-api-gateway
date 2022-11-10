@@ -2,8 +2,8 @@ package auth
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/hellokvn/go-grpc-api-gateway/pkg/auth/routes"
-	"github.com/hellokvn/go-grpc-api-gateway/pkg/config"
+	"github.com/manumura/go-grpc-api-gateway/pkg/auth/routes"
+	"github.com/manumura/go-grpc-api-gateway/pkg/config"
 )
 
 func RegisterRoutes(r *gin.Engine, c *config.Config) *ServiceClient {

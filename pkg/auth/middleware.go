@@ -6,7 +6,7 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	"github.com/hellokvn/go-grpc-api-gateway/pkg/auth/pb"
+	"github.com/manumura/go-grpc-api-gateway/pkg/auth/pb"
 )
 
 type AuthMiddlewareConfig struct {
