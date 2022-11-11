@@ -2,6 +2,7 @@ package routes
 
 import (
 	"context"
+	"fmt"
 	"net/http"
 	"strconv"
 
@@ -21,10 +22,12 @@ func FineOne(ctx *gin.Context, c pb.ProductServiceClient) {
 		Id: int64(id),
 	})
 
+	fmt.Printf("Find one product response: %++v\n", res)
+
 	if err != nil {
 		ctx.AbortWithError(http.StatusBadGateway, err)
 		return
 	}
 
-	ctx.JSON(http.StatusCreated, &res)
+	ctx.JSON(http.StatusOK, &res)
 }

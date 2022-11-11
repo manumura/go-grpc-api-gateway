@@ -2,6 +2,7 @@ package routes
 
 import (
 	"context"
+	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -22,11 +23,19 @@ func CreateOrder(ctx *gin.Context, c pb.OrderServiceClient) {
 	}
 
 	userId, _ := ctx.Get("userId")
+	fmt.Printf("type of userId is: %T\n", userId)
+
+	u, ok := userId.(int64)
+	if !ok {
+		ctx.AbortWithStatus(http.StatusBadRequest)
+		return
+	}
+	fmt.Printf("type of u is: %T\n", u)
 
 	res, err := c.CreateOrder(context.Background(), &pb.CreateOrderRequest{
 		ProductId: b.ProductId,
 		Quantity:  b.Quantity,
-		UserId:    userId.(int64),
+		UserId:    u,
 	})
 
 	if err != nil {
