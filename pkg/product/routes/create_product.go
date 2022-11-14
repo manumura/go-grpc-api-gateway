@@ -2,6 +2,7 @@ package routes
 
 import (
 	"context"
+	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -21,6 +22,8 @@ func CreateProduct(ctx *gin.Context, c pb.ProductServiceClient) {
 		ctx.AbortWithError(http.StatusBadRequest, err)
 		return
 	}
+
+	fmt.Printf("Create product request body: %++v\n", b)
 
 	res, err := c.CreateProduct(context.Background(), &pb.CreateProductRequest{
 		Name:  b.Name,
